@@ -1,15 +1,13 @@
 import React, {useState}from "react";
-import Start from "./Test/Start";
-import Question from "./Test/Question";
-import {Result} from "./Test/Result";
-import "../src/Test/App.css";
-import store from "./State/store";
+import Question from "./Test2/question";
+import {Result} from "./Test2/result";
+import "../src/Test2/app.css";
+import store from "./State/storeCss";
 import {BrowserRouter, NavLink, Route} from "react-router-dom";
-import TestCss from "./TestCss";
+import StartCss from "./Test2/start";
 
 
-
-const Test = () => {
+const TestCss = () => {
 
     let [answer, setAnswer] = useState(0)
     let [flag, setFlag] = useState(0)
@@ -67,16 +65,14 @@ const Test = () => {
 
         <BrowserRouter>
             <div className="container1 mt-5">
-                <NavLink to="/test" className="navlink"><h1 className="title">HTML Тест</h1></NavLink>
-                <Route exact path="/test"><Start /></Route>
+                <NavLink to="/testcss" className="navlink"><h1 className="title">Css Тест</h1></NavLink>
+                <Route exact path="/testcss"><StartCss/></Route>
                 {questionsArray}
-
                 <Route exact path="/result"><Result getResult={getResult} result={result} /></Route>
-                <TestCss/>
             </div>
         </BrowserRouter>
 
     );
 };
 
-export default Test;
+export default TestCss;

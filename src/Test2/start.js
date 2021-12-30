@@ -1,8 +1,7 @@
 import React from "react";
-import "../Test/App.css"
+import "../Test2/app.css"
 import {NavLink} from "react-router-dom";
 import {Button} from "react-bootstrap";
-
 function Start() {
     return (
         <div className="start-wrapper">
